@@ -1,0 +1,290 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+@layer base.normalize-overrides {
+	body {
+	  -webkit-font-smoothing: antialiased;
+	  font-family: 'Inter', sans-serif;
+	}
+  }
+html,body {
+	height: 100%;
+	background-image: url('http://s3.amazonaws.com/eyeworksgroupcdn/wp-content/uploads/2015/06/12043432/Silver-Blur-Background-Wallpaper.jpg');
+	background-size: cover;
+	overflow: hidden;
+    background-color: #000000;	
+}
+
+#wrap {
+	background-color: #000000;	
+}
+
+#album {
+	position: absolute;
+	top: 12.5%;
+	left: 12.5%;
+	height: 50vw;
+	width: 50%;
+	max-height: 75%;
+	max-width: 75vh;
+}
+#cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-image: url('https://resources.wimpmusic.com/images/e4b27d83/6d03/4d1d/bd1a/82abf8920455/1280x1280.jpg');
+	background-size: 100% 100%;
+	box-shadow: 5px 0 20px 0 rgba(0,0,0,0.6),
+	            inset 0 0 10px 5px rgba(255,255,255,0.2),
+			    inset 0 0 4px 2px rgba(0,0,0,0.2);
+	border-radius: 4px;
+
+
+}
+#cover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-image: url('http://i.imgur.com/i0fMWpe.jpg');
+    background-size: 100% 100%;
+    border-radius: 4px;
+    mix-blend-mode: screen;
+    opacity: 0.5;
+    content: '';
+}
+#cover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://orig06.deviantart.net/0124/f/2013/136/6/7/texture_326_by_sirius_sdz-d65gs3s.jpg');
+    background-size: 100% 100%;
+    border-radius: 4px;
+    mix-blend-mode: screen;
+    opacity: 0.2;
+    content: '';
+}
+#vinyl {
+		position: absolute;
+		top: 2.5%;
+		left: 2.5%;
+		z-index: 0;
+		width: 95%;
+		height: 95%;
+		display: block;
+		background-image: url('https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Music-PNG/Gramophone_Vinyl_LP_Record_PNG_Transparent_Clip_Art_Image.png?m=1462983196');
+		background-size: 106% 106%;
+		background-position: center;
+		box-shadow: 0 0 20px 4px rgba(0,0,0,0.6);
+		border-radius: 50%;
+		content: '';
+		animation: 5s linear spinThat infinite, 1s ease-out getOut 1s forwards;
+		
+}
+#vinyl::before {
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    z-index: 10;
+    width: 95%;
+    height: 95%;
+    background-image: url('http://www.designresourcebox.com/ths/diverse/blacktextures/82267467.jpg');
+    background-size: 100% 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    opacity: 0.3;
+    content: '';
+}
+#vinyl:print {
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    height: 34%;
+    width: 34%;
+    box-shadow: inset 0 0 0 5px rgba(150,150,150,0.5);
+    background-image: url('http://assets.teamrock.com/image/14d29742-c6f7-43f6-bbe1-6bf7b3b34c6f?w=800');
+background-size: cover;
+    border-radius: 50%;
+}
+@keyframes getOut {
+	0% {
+		left: 0;
+	}
+	100% {
+		left: 50%;
+	}
+}
+@keyframes spinThat {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.p1{
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'CoFO Sans',
+    
+}
+  .card-wrapper{
+	min-height: 600px;
+	min-width: 350px;
+	border-radius: 10px;
+	position:absolute;
+	left: 70%;
+	bottom: 30;
+	margin-top: 6%;
+	transform: translateX(-50%);
+	background:rgba(255,255,255,0.3);
+	backdrop-filter: blur(13px);
+	box-shadow: 0 0 20px -2px black;
+	display:flex;
+	justify-content:center;
+	flex-direction: column;
+	padding: 20px 0;
+	color: rgba(18,18,18,0.85);
+  }
+  
+  .call-to-action{
+	text-align:center;
+	padding: 10px 0;
+	letter-spacing: 1px;
+	font-family: 'Inter', sans-serif;
+	font-size:25px;
+  }
+  .card-wrapper form{
+	display:flex;
+	flex-direction:column;
+  }
+  .card-wrapper form .field{
+	width: 100%;
+	position: relative;
+	font-size: 18px;
+	padding: 7px 30px;
+	white-space: no-wrap;
+  }
+  .card-wrapper form .field::after{
+	content : "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	height: 1px;
+	width: 85%;
+	padding-top: 5px;
+	border-top:1px solid rgba(18,18,18,0.6);
+  }
+  .card-wrapper form a{
+	margin-right: 10%;
+	margin-top: 10px;
+	text-align: right;
+	font-size: 16px;
+	text-decoration:none;
+	color:rgba(18,18,18,0.7);
+	
+  }
+  
+  .card-wrapper form a span{
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease;
+  }
+  .card-wrapper form a:hover span{
+	color: #121212;
+	border-bottom-color: #121212;
+  }
+  .card-wrapper form .field i{
+	font-size: 22px;
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+	text-align:left;
+  }
+  .card-wrapper form .field label{
+	width: 100%;
+	font-size: 17px;
+	margin-bottom: 20px;
+	line-height: 30px;
+	font-weight: bolder;
+	text-align: center;
+	color: #4f1612;
+  }
+  
+  .card-wrapper form .field input{
+	border: 0;
+	background: transparent;
+	padding:0 5px;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	height: 30px;
+	width: calc(100% - 50px);
+	vertical-align: middle;
+	text-align: right;
+  }
+  .card-wrapper form .field input:focus{
+	outline:none;
+  }
+  .card-wrapper form .field input::placeholder{
+	color: rgba(18,18,18,0.7);
+  }
+  
+  #login-button{
+	margin: 20px 0;
+	width: 80%;
+	height: 40px;
+	border-radius: 20px;
+	border:none;
+	background: rgba(255,255,255,0.2);
+	position:relative;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	color: rgba(0, 0, 0, 0.8);
+	font-family: 'Inter', sans-serif;
+	font-size: large;
+	font-weight: bolder;
+	letter-spacing: 1px;
+  }
+  #login-button:hover{
+	background: rgba(60, 57, 57, 0.3);
+	color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .alternate-logins{
+	margin-top: 30px;
+  }
+  .alternate-logins, .sign-up{
+	padding: 20px 0;
+	text-align:center;
+  }
+  
+  .social-links{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	padding: 15px 0;
+	justify-content:center;
+  }
+  
+  .sign-up a{
+	text-decoration: none;
+	color: inherit;
+	position: relative;
+	top: 10px;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s ease;
+  }
+  
+  .sign-up a:hover{
+	color: #121212;
+	border-bottom-color: #121212;
+  }

@@ -1,0 +1,352 @@
+@import 'https://unpkg.com/open-props' layer(design.system);
+@import 'https://unpkg.com/open-props/normalize.dark.min.css'
+  layer(base.normalize);
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200..900&family=Pacifico&display=swap');
+
+@import 'https://www.unpkg.com/layout-craft@0.1.1/dist/utilities.css'
+  layer(design.utilities);
+
+
+
+
+@layer base.normalize-overrides {
+  :root {
+    
+    font-family: 'Inter', sans-serif;
+    --surface-1: black;
+    --surface-2: oklch(0.19 0 0);
+    --text-1: white;
+
+   
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+@layer base.components {
+  
+a {
+  color: #161616;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Start */
+
+.container {
+  padding: 0 10rem;
+}
+
+.navbar {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+}
+
+.navbar--subsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.navbar--subsection a.icon {
+  background: url(https://cdn.rawgit.com/ivorpad/b9adce880f800f53195041a4ed8546c9/raw/a905a3b479ab7880340856a3d15369a932f7b24c/ham.svg) center center no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.navbar--subsection nav a {
+  transition: border 0.1s ease-in-out;
+}
+
+.navbar--subsection nav a:hover {
+  border-bottom: 1px solid #161616;
+}
+
+
+.navbar--subsection nav a.active {
+  color: grey;
+  border-bottom: 1px solid grey;
+}
+
+.navbar--subsection .branding {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  
+}
+
+.navbar--subsection nav:not(.branding) a,
+.vasold--container .meta span {
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+.navbar--subsection nav:first-child a {
+  margin-right: 1.5rem;
+}
+
+.navbar--subsection nav:nth-last-child(2) a {
+  margin-left: 1.5rem;
+}
+
+.banner {
+  width: max-content;
+  background: #f1f1f1;
+  padding: 5rem;
+  margin-top: 8rem;
+  overflow: hidden;
+}
+
+.banner .slide {
+  width: max-content;
+  display: flex;
+  justify-content: space-around;
+  object-fit: cover;
+  
+}
+
+.banner h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
+}
+
+.slide img {
+  width: 40%;
+  height: 50%;
+  align-self: center;
+}
+
+.slide .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.Vinyls {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, minmax(360px, 1fr));
+  gap: 3rem;
+  grid-auto-rows: 360px;
+}
+
+.Vsold {
+  display: flex;
+  flex-direction: column;
+}
+
+.Vsold--container {
+  background: #f1f1f1;
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.Vsold--container .meta {
+  display: flex;
+  justify-content: space-between;
+}
+.Vsold--container img {
+  width: "300";
+  height:"160";
+}
+
+.Vsold--container .meta > span {
+  font-weight: bold;
+}
+
+.Vsold h3 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5px;
+  font-size: 1.1rem;
+  margin: 0.8rem;
+  color:white;
+}
+
+.Vsold h3 a {
+  color: rgb(255, 255, 255);
+}
+.Vsold h3 a:hover {
+  color: grey;
+}
+
+.Vsold .price {
+  text-align: center;
+}
+
+.Vsold .title > a {
+  display: block;
+}
+
+.Vsold .price span {
+  margin-top: 1rem;
+  text-align: center;
+  color: grey;
+  font-size: 1.3rem;
+}
+
+.Vsold--container img {
+  align-self: center;
+  margin: auto 0;
+}
+
+.main-footer {
+  margin: 7rem 0;
+  padding-top: 5rem;
+  border-top: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+}
+
+.main-footer > nav ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.main-footer > nav ul li {
+  margin-bottom: 1rem;
+}
+
+.main-footer > nav ul li a {
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.main-footer > nav ul li a:hover {
+  color: darken(grey, 50%);
+}
+
+.main-footer h3 {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.3rem;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .topnav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  nav.menu,
+  .user-engagement {
+    display: none;
+  }
+
+  .topnav--subsection a.icon {
+    display: block;
+  }
+}
+
+@media (max-width: 895px) {
+  .main-footer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+  }
+}
+
+@media (max-width: 425px) {
+  .slide img {
+    display: none;
+  }
+  .slide .left {
+    width: 100%;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-item .Vnames h3 {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .shop-item .price span {
+    font-size: 1.5rem;
+  }
+
+  .main-footer > nav ul li a {
+    background: #f1f1f1;
+    display: block;
+    padding: 1.5rem;
+    color: grey;
+    font-size: 1.5rem;
+  }
+
+  .main-footer > nav ul li a:hover {
+    color: grey;
+  }
+
+  .main-footer h3 {
+    font-size: 1.5rem;
+  }
+
+  .slide .description {
+    width: 100%;
+  }
+}
+
+}

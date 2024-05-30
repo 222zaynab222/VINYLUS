@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="vinyl2.css">
+</head>
+<script>
+    $('audio').mediaelementplayer({
+	features: ['playpause','progress','current','tracks','fullscreen']
+});
+</script>
+<body>
+  <div class="container">
+    <header class="navbar">
+      <div class="navbar--subsection">
+        <nav class="menu">
+          <a class="active" href="#" style="font-size: 15px;">Home</a>
+        </nav>
+        <!-- / .menu -->
+
+        <nav class="branding">
+          <a href="Front page.html" style="font-size: 20px;" center>Vinylus</a>
+        </nav>
+        <!-- / .branding -->
+
+        <nav class="interactionwtv">
+          <a href="HP.html" style="font-size: 15px;">Login</a>
+        </nav>
+        <!-- / .interactionwtv -->
+        <a class="icon" href="#"></a>
+      </div>
+    </header>
+        
+    <section class="center">
+      <div class="content-wrapper">
+        <a href="#" class="Visual block-center-center">
+          <picture>
+            <img src="vinyl21.png" alt="RED vinyl" />
+          </picture>
+          <picture>
+            <img src="vinyl22.png" alt="RED vinyl" />
+          </picture>
+        </a>
+    
+        <form action="" class="Form block-start-start gap-4">
+          <h3 style="font-family: 'Inter', sans-serif;">Stock Child Wonder Vinyl</h3>
+    
+          <div class="Price">$39.00</div>
+    
+          <fieldset id="quantity-list" class="QtField inline-center-center gap-2">
+            <label for="quantitySelect" style="font-family: 'Inter', sans-serif;">Quantity:</label>
+            <select size="1" id="quantitySelect" name="amount_0_0">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </fieldset>
+    
+          <div class="block-start-start gap-2">
+            <button class="Button Primary" onclick="window.location.href = 'https://www.vinylmeplease.com/products/knox-fortune-stock-child-wonder?variant=32911930982490'">Order</button>
+            <small>SHIPS ON JUNE 10th, 2024</small>
+          </div>
+    
+          <p>The latest and second album from Chicago-bred singer/songwriter/producer Knox Fortune,
+             Stock Child Wonder, is a mature, yet out-of-the-box follow-up to his debut Paradise.
+              Blurring together the fringes of bedroom pop and indie R&B, 
+              Stock Child Wonder is just as eclectic and surprising as it is effortless. </p>
+        </form>
+
+        <!-- Audio class placed under the text and picture -->
+        <article>
+            <div class="cont">
+                <h3>Just Enough</h3>
+                <time>JULY 26, 2022</time>
+            </div>
+            <audio class="audio" controls="controls">
+                <source type="audio/mpeg" src="Knox Fortune - Just Enough.mp3">
+            </audio>
+        </article>
+        
+      </div>
+    </section>
+  </div>
+</body>
+</html>
